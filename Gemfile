@@ -13,6 +13,7 @@ gem 'simple_form'
 gem 'materialize-sass'
 gem 'materialize-form'
 gem 'geocoder'
+gem 'gmaps4rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri

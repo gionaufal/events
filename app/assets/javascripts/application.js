@@ -15,10 +15,7 @@
 //= require turbolinks
 //= require materialize-sprockets
 //= require materialize-form
+//= require underscore
+//= require gmaps/google
 //= require_tree .
 
-$(document).ready(function() {
-  window.materializeForm.init()
-  });
-
-})
