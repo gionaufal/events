@@ -12,6 +12,7 @@ gem 'paperclip', '~> 5.0.0'
 gem 'simple_form'
 gem 'materialize-sass'
 gem 'materialize-form'
+gem 'geocoder'
 
 group :development, :test do
   gem 'byebug', platform: :mri
