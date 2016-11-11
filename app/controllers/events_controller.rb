@@ -15,6 +15,7 @@ class EventsController < ApplicationController
     @hash = Gmaps4rails.build_markers(@event) do |event, marker|
       marker.lat event.latitude
       marker.lng event.longitude
+      marker.infowindow "<a href=#{event_path}>#{event.name}</a> <br> #{event.date}"
     end
   end
 
