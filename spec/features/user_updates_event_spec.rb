@@ -17,4 +17,17 @@ feature 'User updates events' do
     expect(page).to have_content('Where: Bethel, NY')
     expect(page).to have_content('When: 08/16/1969')
   end
+
+  scenario 'and doesnt fill all fields' do
+    event = create(:event)
+
+    visit event_path(event)
+
+    click_on 'Edit event'
+
+    fill_in 'Name', with: ''
+    click_on 'Update event'
+
+    expect(page).to have_content('Error updating event')
+  end
 end

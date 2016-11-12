@@ -15,4 +15,14 @@ feature 'User creates events' do
     expect(page).to have_content('Where: Bethel, NY')
     expect(page).to have_content('When: 08/16/1969')
   end
+
+  scenario 'and doesnt fill all fields' do
+    visit root_path
+
+    click_on 'New event'
+
+    click_on 'Submit event'
+
+    expect(page).to have_content('Error creating event')
+  end
 end
