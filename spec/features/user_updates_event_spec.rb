@@ -10,12 +10,13 @@ feature 'User updates events' do
 
     fill_in 'Name', with: 'Woodstock'
     fill_in 'Address', with: 'Bethel, NY'
-    fill_in 'Date', with: '08/16/1969'
+    fill_in 'Date', with: '16/08/1969'
     click_on 'Update event'
 
     expect(page).to have_css('h2', text: 'Woodstock')
     expect(page).to have_content('Where: Bethel, NY')
-    expect(page).to have_content('When: 08/16/1969')
+    expect(page).to have_content(
+                    "When: #{'16/08/1969'.to_date.strftime('%A, %d %b %Y')}" )
   end
 
   scenario 'and doesnt fill all fields' do

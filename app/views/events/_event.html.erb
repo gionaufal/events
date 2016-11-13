@@ -1,5 +1,7 @@
-<h2><%= link_to event.name, event %> </h2>
-<p> Where: <%= event.address %> </p>
-<p> When: <%= event.date %> </p>
-<p> Latitude: <%= event.latitude %> </p>
-<p> Longitude: <%= event.longitude %> </p>
+<article class='event'>
+  <h2><%= link_to event.name, event %> </h2>
+  <p> Where: <%= event.address %> </p>
+  <p> When: <%= event.friendly_date %> </p>
+  <p> Latitude: <%= event.latitude %> </p>
+  <p> Longitude: <%= event.longitude %> </p>
+</article>
