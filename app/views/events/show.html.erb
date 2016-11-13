@@ -1,13 +1,11 @@
-<h1><%= @event.name %> </h1>
-<p> Where: <%= @event.address %> </p>
-<p> When: <%= @event.date %> </p>
-<p> Latitude: <%= @event.latitude %> </p>
-<p> Longitude: <%= @event.longitude %> </p>
+<%= render @event %>
 <div style='width: 800px;'>
-    <div id="map" style='width: 800px; height: 400px;'></div>
+  <div id="map" style='width: 800px; height: 400px;'></div>
 </div>
 
-<%= link_to 'Edit event', edit_event_path %>
+<%= link_to 'Edit event', edit_event_path, class: 'waves-effect waves-light btn' %>
+<%= link_to 'Delete', @event, method: :delete, class: 'waves-effect waves-light btn red' %>
+
 <script type='text/javascript'>
   handler = Gmaps.build('Google');
   handler.buildMap({ provider: {}, internal: {id: 'map'} }, function(){

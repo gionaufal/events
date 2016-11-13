@@ -11,7 +11,7 @@ feature 'User creates events' do
     fill_in 'Date', with: '08/16/1969'
     click_on 'Submit event'
 
-    expect(page).to have_css('h1', text: 'Woodstock')
+    expect(page).to have_css('h2', text: 'Woodstock')
     expect(page).to have_content('Where: Bethel, NY')
     expect(page).to have_content('When: 08/16/1969')
   end
