@@ -3,5 +3,6 @@ FactoryGirl.define do
     name 'Crazy event'
     address 'Av. Paulista, 1000'
     date '01/01/2017'
+    tag 'Awesome'
   end
 end

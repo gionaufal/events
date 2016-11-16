@@ -11,6 +11,11 @@
   </div>
 </section>
 
+<section class='tags'>
+  <% @tags.each do |tag|%>
+    <%= link_to tag, tag_path(id: tag) %>
+  <% end %>
+</section>
 <script type='text/javascript'>
   handler = Gmaps.build('Google');
   handler.buildMap({ provider: {}, internal: {id: 'map'} }, function(){
