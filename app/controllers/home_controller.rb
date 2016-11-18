@@ -10,6 +10,6 @@ class HomeController < ApplicationController
   end
 
   def tag
-    @events = Event.find_by(tag: params[:id])
+    @events = Event.where(tag: params[:id])
   end
 end
