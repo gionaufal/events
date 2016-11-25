@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @events = Event.all.order(:date)
+    @events = Event.where("date <= #{Date.today}").order(:date)
     @tags = Event.distinct.pluck(:tag)
     @hash = Gmaps4rails.build_markers(@events) do |event, marker|
       marker.lat event.latitude
