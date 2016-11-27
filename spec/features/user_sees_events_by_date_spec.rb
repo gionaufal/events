@@ -2,8 +2,8 @@ require 'rails_helper'
 
 feature 'User sees events ordered by date' do
   scenario 'successfully' do
-    event1 = create(:event, name: 'Crazy event', date: '10/10/2016')
-    event2 = create(:event, name: 'First event', date: '05/05/2016')
+    event1 = create(:event, name: 'Crazy event', date: 15.days.from_now) 
+    event2 = create(:event, name: 'First event', date: 11.days.from_now)
 
     visit root_path
     within('article:first-child') do

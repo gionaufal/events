@@ -6,7 +6,7 @@ feature 'User searches events by tag' do
     visit root_path
     click_on event.tag
 
-    expect(page).to have_content "Events tagged with #{event.tag}"
+    expect(page).to have_content "1 event tagged with #{event.tag}"
     expect(current_path).not_to be root_path
   end
 end
