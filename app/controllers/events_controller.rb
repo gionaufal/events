@@ -39,6 +39,16 @@ class EventsController < ApplicationController
     @event.destroy
     redirect_to root_path
   end
+
+  def index
+    @events = Event.all.order(:date)
+  end
+
+  def import
+    Event.import(params[:file])
+    redirect_to root_path, notice: 'Events imported'
+  end
+
   private
 
   def event_params

@@ -1,0 +1,11 @@
+<h2>Import events</h2>
+
+<%= form_tag import_events_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag 'Import', class:"waves-effect waves-light btn" %>
+<% end %>
+
+<h2>All events</h2>
+<section class='events'>
+  <%= render @events %>
+</section>

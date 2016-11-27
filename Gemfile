@@ -14,6 +14,8 @@ gem 'materialize-sass'
 gem 'materialize-form'
 gem 'geocoder'
 gem 'gmaps4rails'
+gem 'roo'
+gem 'open_uri_w_redirect_to_https'
 
 group :development, :test do
   gem 'byebug', platform: :mri
