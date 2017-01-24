@@ -1,24 +1,8 @@
-# README
+# Events App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## What is it?
+This is an app made to manage and spread any kind of event. 
 
-Things you may want to cover:
+## How was it made?
+It was made using Ruby on Rails, TDD, Materialize, Paperclip and some of the most used gems
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
