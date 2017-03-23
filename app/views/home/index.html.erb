@@ -3,7 +3,7 @@
 <%= link_to 'New event', new_event_path, class:'waves-effect waves-light btn' %>
 <%= link_to 'Import events', events_path, class:'waves-effect waves-light btn' %>
 
-<section class='events'>
+<section class='events row'>
   <% if !@events.empty?%>
     <%= render @events %>
     <div style='width: 800px;'>

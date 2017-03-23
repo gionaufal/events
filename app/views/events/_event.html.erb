@@ -1,8 +1,20 @@
-<article class='event'>
-  <h2><%= link_to event.name, event %> </h2>
-  <p> Where: <%= event.address %> </p>
-  <p> When: <%= event.friendly_date %> </p>
-  <p> Tag: <%= event.tag %> </p>
+<article class='event col m6'>
+  <div class='card medium'>
+    <div class='card-image waves-effect waves-block waves-light'>
+      <%= image_tag event.image.url(:medium), class:'activator'%>
+    </div>
 
+    <div class='card-content'>
+      <span class='card-title grey-text text-darken-4'><%= link_to event.name, event %></span>
+      <p> Where: <%= event.address %> </p>
+      <p> When: <%= event.friendly_date %> </p>
+    </div>
 
+    <div class='card-reveal'>
+      <span class='card-title grey-text text-darken-4'><%= link_to event.name, event %><i class="material-icons right">close</i></span>
+      <p> Where: <%= event.address %> </p>
+      <p> When: <%= event.friendly_date %> </p>
+      <p> Tag: <%= event.tag %> </p>
+    </div>
+  </div>
 </article>
